@@ -7,6 +7,7 @@ from core.config import settings
 from core.database import check_database_health
 from api.auth import get_current_user
 from api.chat import router as chat_router
+from api.me import router as me_router
 
 # Configure logging
 
@@ -70,6 +71,7 @@ async def protected_route():
 
 # Register Routers
 app.include_router(chat_router)
+app.include_router(me_router)
 
 if __name__ == "__main__":
     import uvicorn

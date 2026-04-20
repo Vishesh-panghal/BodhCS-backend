@@ -2,7 +2,7 @@ import json
 import asyncio
 import logging
 from typing import List, Dict, Any
-from fastapi import APIRouter, HTTPException
+from fastapi import APIRouter, HTTPException, Depends
 from fastapi.responses import StreamingResponse
 from pydantic import BaseModel
 
@@ -73,7 +73,7 @@ NODE_STATUS = {
 
 
 @router.post("")
-async def chat_stream(request: ChatRequest):
+async def chat_stream(request: ChatRequest, _current_user=Depends(get_current_user)):
     """
     Streaming chat endpoint using SSE.
     

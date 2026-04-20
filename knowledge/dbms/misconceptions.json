@@ -1,0 +1,14 @@
+[
+  {
+    "myth": "NoSQL is always faster than SQL",
+    "truth": "NoSQL trades ACID guarantees for horizontal scalability. For structured data with complex joins, PostgreSQL often outperforms MongoDB. The choice depends on data model and access patterns, not raw speed."
+  },
+  {
+    "myth": "Adding more indexes always speeds up queries",
+    "truth": "Each index slows down INSERT/UPDATE/DELETE operations because the index must be maintained. Too many indexes waste storage and can confuse the query planner. Profile with EXPLAIN ANALYZE before adding indexes."
+  },
+  {
+    "myth": "3NF is always the best normalization level",
+    "truth": "Over-normalization leads to excessive JOINs hurting read performance. Data warehouses intentionally denormalize (star/snowflake schemas) for analytical queries. The right level depends on read/write ratio."
+  }
+]

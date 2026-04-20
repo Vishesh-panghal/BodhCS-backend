@@ -1,0 +1,1 @@
+{"osi_model": "flowchart TD", "tcp_handshake": "sequenceDiagram", "routing": "flowchart TD", "dns_resolution": "sequenceDiagram", "subnet": "flowchart LR", "http_request": "sequenceDiagram", "tls_handshake": "sequenceDiagram", "nat": "flowchart LR"}

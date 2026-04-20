@@ -1,0 +1,14 @@
+[
+  {
+    "myth": "TCP is always slower than UDP",
+    "truth": "TCP adds ~1 RTT for handshake and has congestion control overhead, but modern TCP (BBR congestion control, TFO) is very fast. QUIC (HTTP/3) runs over UDP but reimplements TCP-like reliability — showing that raw UDP isn't automatically better."
+  },
+  {
+    "myth": "The OSI model is how the internet actually works",
+    "truth": "The internet uses the TCP/IP 4-layer model. OSI is a teaching framework. Real protocols don't map cleanly to 7 layers — TLS spans session/presentation/transport, HTTP spans application/presentation."
+  },
+  {
+    "myth": "A switch and router do the same thing",
+    "truth": "Switches operate at Layer 2 (MAC addresses, within a LAN). Routers operate at Layer 3 (IP addresses, between networks). Modern L3 switches blur the line but the conceptual distinction matters."
+  }
+]

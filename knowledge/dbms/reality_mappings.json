@@ -1,0 +1,8 @@
+{
+  "B+ Tree Index": "PostgreSQL uses B+ trees for all standard indexes (CREATE INDEX). Leaf nodes are doubly linked for range scans. InnoDB's clustered index stores actual row data in leaf nodes.",
+  "MVCC": "PostgreSQL implements MVCC by storing xmin/xmax transaction IDs in each tuple. Old versions are cleaned up by VACUUM. MySQL InnoDB uses undo logs for version chain.",
+  "WAL": "PostgreSQL's Write-Ahead Log ensures crash recovery — changes are logged before being applied to data pages. pg_wal directory contains WAL segments. Similar to Redis AOF and ext4 journaling.",
+  "JOIN": "PostgreSQL's query planner chooses between Nested Loop (small tables), Hash Join (equality joins, larger tables), and Merge Join (pre-sorted data). EXPLAIN ANALYZE shows which was chosen.",
+  "Normalization": "Instagram stores user data in normalized form (users, posts, comments as separate tables) for write efficiency. Analytics warehouses (Snowflake, BigQuery) use denormalized star schemas for read performance.",
+  "Transaction Isolation": "PostgreSQL default is Read Committed. MySQL InnoDB default is Repeatable Read. Banking systems typically use Serializable. Connection poolers (PgBouncer) may affect transaction semantics."
+}

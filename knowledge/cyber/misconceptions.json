@@ -1,0 +1,14 @@
+[
+  {
+    "myth": "HTTPS means the website is safe",
+    "truth": "HTTPS only encrypts transit — a phishing site can have a valid TLS certificate (free from Let's Encrypt). HTTPS protects against MitM attacks, not malicious content. Always verify the domain, not just the padlock."
+  },
+  {
+    "myth": "Encryption and hashing are the same thing",
+    "truth": "Encryption is reversible (with the key): AES, RSA. Hashing is one-way: SHA-256, bcrypt. Encryption is for confidentiality, hashing is for integrity verification and password storage."
+  },
+  {
+    "myth": "Firewalls alone can prevent all attacks",
+    "truth": "Firewalls filter network traffic but can't prevent application-layer attacks (SQL injection, XSS) that arrive via allowed ports (80/443). Defense-in-depth requires WAF, input validation, authentication, and monitoring."
+  }
+]

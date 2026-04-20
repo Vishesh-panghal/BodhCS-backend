@@ -1,0 +1,34 @@
+[
+  {
+    "myth": "Deadlock and starvation are the same thing",
+    "truth": "Deadlock is a circular wait with zero progress for ALL involved processes. Starvation means ONE process waits indefinitely while others make progress. Deadlock implies starvation, but starvation does not imply deadlock."
+  },
+  {
+    "myth": "More RAM always eliminates swapping",
+    "truth": "Linux may still swap inactive anonymous pages to free up memory for page cache (file buffers). The swappiness parameter (0-200) controls this tradeoff. Setting swappiness=0 doesn't disable swapping entirely."
+  },
+  {
+    "myth": "Processes and threads are completely different things",
+    "truth": "In Linux, both are represented by task_struct. A thread is created via clone() with flags like CLONE_VM (share address space). The kernel scheduler treats them identically."
+  },
+  {
+    "myth": "Priority Inversion is just a scheduling bug",
+    "truth": "It's a fundamental concurrency problem: a low-priority task holding a lock blocks a high-priority task. The Mars Pathfinder incident (1997) is the classic example. Solutions: Priority Inheritance Protocol (PIP) or Priority Ceiling Protocol (PCP)."
+  },
+  {
+    "myth": "Paging is slower than segmentation",
+    "truth": "Paging uses fixed-size pages eliminating external fragmentation, and TLB hardware makes translation fast (~1 cycle on hit). Segmentation suffers from external fragmentation and is effectively deprecated on x86-64 (uses flat segments)."
+  },
+  {
+    "myth": "A mutex and a binary semaphore are interchangeable",
+    "truth": "A mutex has ownership — only the thread that locked it can unlock it. A binary semaphore has no ownership concept. Mutexes support priority inheritance; binary semaphores do not."
+  },
+  {
+    "myth": "SSD seeks are instant, so I/O scheduling doesn't matter for SSDs",
+    "truth": "SSDs have no mechanical seek, but they still benefit from write coalescing and parallelism. The 'none' scheduler is preferred for NVMe because the device handles its own scheduling via FTL."
+  },
+  {
+    "myth": "Context switching only saves/restores registers",
+    "truth": "A full process context switch also involves switching page tables (CR3 on x86), flushing TLB entries, invalidating branch prediction state, and potentially flushing CPU caches. Thread switches within the same process skip page table switching."
+  }
+]

@@ -1,0 +1,14 @@
+{
+  "HashMap": "Python dict uses open addressing with random probing. Java HashMap uses separate chaining with linked lists (converts to red-black tree at 8 entries). Average O(1) get/put, worst case O(n) with pathological hash collisions.",
+  "Binary Search Tree": "C++ std::map and Java TreeMap use Red-Black Trees (self-balancing BST). Guarantees O(log n) for insert/delete/search. Linux kernel uses RB-trees extensively (CFS scheduler, memory management).",
+  "Priority Queue": "C++ std::priority_queue uses a binary max-heap on a vector. Python heapq is a min-heap. Java PriorityQueue is a min-heap. Used in Dijkstra's algorithm, Huffman coding, task scheduling.",
+  "Dijkstra": "Google Maps uses a variant of Dijkstra with A* heuristic for route planning. With a binary heap: O((V+E) log V). With Fibonacci heap: O(V log V + E). Doesn't work with negative edges — use Bellman-Ford.",
+  "Quick Sort": "C qsort(), Python's Timsort (hybrid merge+insertion), Java Arrays.sort() for primitives uses dual-pivot quicksort. Average O(n log n), worst O(n²) but mitigated by random pivot or median-of-three.",
+  "Merge Sort": "Python's sorted() and list.sort() use Timsort (a hybrid of merge sort and insertion sort). Timsort exploits existing runs in data. Stable, O(n log n) guaranteed, O(n) extra space.",
+  "Graph BFS": "Web crawlers (Googlebot) use BFS to discover pages layer by layer. Social network friend recommendations use multi-source BFS. NetworkX and igraph implement BFS for graph analysis.",
+  "Graph DFS": "Topological sorting of build dependencies (Make, Gradle) uses DFS. Cycle detection in directed graphs. Maze generation algorithms. Tarjan's SCC algorithm is DFS-based.",
+  "Dynamic Programming": "Autocomplete/spell check uses edit distance (DP). Sequence alignment in bioinformatics (Needleman-Wunsch). Resource allocation, knapsack problems in logistics. Redis uses LRU which can be viewed as a DP-inspired cache policy.",
+  "B-Tree": "PostgreSQL and MySQL InnoDB use B+ Trees for indexes. B-Trees minimize disk I/O by having high branching factor (100-1000). Each node fits in one disk page (4KB-16KB). O(log_B n) search where B is branching factor.",
+  "Trie": "Autocomplete in search engines, IP routing tables (longest prefix match), spell checkers. Redis uses radix trees internally. Space-efficient variants: compressed trie (Patricia trie), ternary search trie.",
+  "Hashing": "Password storage uses bcrypt/argon2 (slow hash). Content-addressable storage (Git) uses SHA-1. Load balancing uses consistent hashing (Amazon DynamoDB, Cassandra). Bloom filters use multiple hash functions for space-efficient membership testing."
+}

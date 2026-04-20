@@ -1,0 +1,1 @@
+{"normalization": "flowchart TD", "er_diagram": "erDiagram", "query_execution": "flowchart LR", "transaction": "sequenceDiagram", "index": "flowchart TD", "join": "flowchart LR", "acid": "flowchart TD", "mvcc": "sequenceDiagram"}

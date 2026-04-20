@@ -1,0 +1,40 @@
+# Web Server
+fastapi
+uvicorn[standard]
+python-multipart
+
+# Configuration & Logic
+pydantic
+pydantic-settings
+python-dotenv
+
+# AI & Orchestration
+langgraph
+langchain-groq
+langchain-core
+langchain-community
+langchain-experimental
+langfuse
+
+# RAG Engine
+faiss-cpu
+sentence-transformers
+rank_bm25
+
+# Education & Analytics
+fsrs
+aiosqlite
+
+# External Services
+supabase
+firebase-admin
+razorpay
+
+# Utilities
+httpx
+upstash-redis
+python-jose[cryptography]
+passlib[bcrypt]
+pymupdf
+beautifulsoup4
+pyyaml

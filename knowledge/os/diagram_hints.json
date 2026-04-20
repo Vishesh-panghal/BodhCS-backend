@@ -1,0 +1,18 @@
+{
+  "scheduling": "gantt",
+  "process_lifecycle": "stateDiagram-v2",
+  "context_switch": "sequenceDiagram",
+  "memory_layout": "flowchart TD",
+  "page_table": "flowchart LR",
+  "virtual_memory": "flowchart TD",
+  "paging": "flowchart LR",
+  "deadlock": "flowchart TD",
+  "file_system": "flowchart TD",
+  "io": "sequenceDiagram",
+  "thread": "flowchart TD",
+  "semaphore": "sequenceDiagram",
+  "lock": "sequenceDiagram",
+  "boot": "sequenceDiagram",
+  "interrupt": "sequenceDiagram",
+  "system_call": "sequenceDiagram"
+}

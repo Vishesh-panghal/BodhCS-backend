@@ -1,0 +1,17 @@
+{
+  "Process": "In Linux, a process is a `task_struct` (~6KB) containing PID, state, memory maps, open files, and scheduling info. Created via fork() which uses Copy-on-Write (COW).",
+  "Thread": "Linux treats threads as lightweight processes via clone() with CLONE_VM flag. Both share the same address space but have separate stacks. NPTL (Native POSIX Threading Library) is the standard implementation.",
+  "Context Switch": "Linux saves all CPU registers to the outgoing task's `task_struct->thread_struct`, switches the kernel stack pointer, and restores the incoming task's registers. Cost: ~1-10μs on modern x86. TLB flush happens on full process switch but not on thread switch within the same process.",
+  "Round Robin": "Linux CFS (Completely Fair Scheduler) uses a red-black tree sorted by virtual runtime (vruntime). Each task gets CPU time proportional to its weight (derived from nice value). Default scheduling granularity ~6ms. CFS replaced the O(1) scheduler in kernel 2.6.23.",
+  "MLFQ": "Linux doesn't use a pure MLFQ, but the CFS + real-time scheduling classes (SCHED_FIFO, SCHED_RR at priorities 0-99, SCHED_NORMAL/CFS at priority 100-139) create a similar multi-level effect.",
+  "Fork": "fork() creates a child process with COW semantics — only page table entries are copied, physical pages are shared and marked read-only. On write, a page fault triggers actual duplication. vfork() avoids even page table copy by sharing address space temporarily.",
+  "Paging": "Linux uses 4-level page tables on x86-64 (5-level with LA57): PGD→P4D→PUD→PMD→PTE. Each page is 4KB by default. Huge pages (2MB/1GB) reduce TLB pressure. The page fault handler in mm/memory.c handles demand paging, COW, and swap-in.",
+  "TLB": "x86 TLBs are hardware-managed (walked by MMU on miss). ARM TLBs can be software-managed. x86-64 has separate L1 iTLB (128 entries) and dTLB (64 entries), plus a unified L2 TLB (~1536 entries). TLB shootdown via IPI required on multi-core when page tables change.",
+  "Virtual Memory": "Linux uses demand paging — pages are allocated only on first access via page fault. The vm_area_struct (VMA) describes each region (text, heap, stack, mmap). /proc/PID/maps shows the layout.",
+  "Deadlock": "Linux kernel uses lockdep (lock dependency validator) to detect potential deadlocks at runtime via lock ordering analysis. User-space deadlocks can be detected via /proc/PID/wchan and stack traces.",
+  "Semaphore": "Linux kernel implements counting semaphores via down()/up() in <linux/semaphore.h>. POSIX user-space semaphores use sem_wait()/sem_post(). Prefer mutexes over binary semaphores for mutual exclusion.",
+  "File System": "ext4 uses journaling via JBD2 with three modes: journal (safest, data+metadata journaled), ordered (default, only metadata journaled but data written before metadata commit), writeback (fastest, no ordering guarantee).",
+  "Swap": "Linux swaps pages to a swap partition or swap file. Swappiness parameter (0-200, default 60) controls how aggressively the kernel reclaims anonymous pages vs dropping page cache. Even with plenty of RAM, the kernel may swap inactive pages.",
+  "Scheduling": "Linux scheduling classes in priority order: SCHED_DEADLINE (EDF) > SCHED_FIFO/SCHED_RR (real-time) > SCHED_NORMAL (CFS) > SCHED_BATCH > SCHED_IDLE. cgroups v2 can limit CPU time per container.",
+  "I/O": "Linux I/O schedulers: mq-deadline (default for HDDs), none/noop (default for SSDs/NVMe), BFQ (optimized for interactive workloads). Block I/O goes through VFS → filesystem → block layer → device driver."
+}

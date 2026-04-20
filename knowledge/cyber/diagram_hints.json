@@ -1,0 +1,1 @@
+{"encryption": "flowchart LR", "tls_handshake": "sequenceDiagram", "oauth": "sequenceDiagram", "xss": "sequenceDiagram", "sql_injection": "sequenceDiagram", "firewall": "flowchart TD", "authentication": "sequenceDiagram"}

@@ -1,0 +1,295 @@
+# CS-Bot Knowledge Sources Manifest
+# Curated list of open-access educational resources
+
+sources:
+  - id: ostep_intro
+    subject: OS
+    title: "Operating Systems: Three Easy Pieces - Introduction"
+    url: "https://pages.cs.wisc.edu/~remzi/OSTEP/intro.pdf"
+    type: pdf
+    license: "Free Online"
+    metadata:
+      author: "Remzi H. Arpaci-Dusseau and Andrea C. Arpaci-Dusseau"
+      version: "1.10"
+
+  - id: ostep_process_api
+    subject: OS
+    title: "Operating Systems: Three Easy Pieces - Process API"
+    url: "https://pages.cs.wisc.edu/~remzi/OSTEP/cpu-api.pdf"
+    type: pdf
+    license: "Free Online"
+
+  - id: ostep_scheduling
+    subject: OS
+    title: "Operating Systems: Three Easy Pieces - Scheduling"
+    url: "https://pages.cs.wisc.edu/~remzi/OSTEP/cpu-sched.pdf"
+    type: pdf
+    license: "Free Online"
+
+  - id: opendsa_dsa_intro
+    subject: DSA
+    title: "OpenDSA: Introduction to Data Structures and Algorithms"
+    url: "https://opendsa-server.cs.vt.edu/ODSA/Books/Everything/html/IntroDSA.html"
+    type: html
+    license: "CC BY-NC-SA"
+
+  # OSTEP - CPU Virtualization (Remaining)
+  - id: ostep_cpu_mechanisms
+    subject: OS
+    title: "OSTEP: Limited Direct Execution"
+    url: "https://pages.cs.wisc.edu/~remzi/OSTEP/cpu-mechanisms.pdf"
+    type: pdf
+  - id: ostep_cpu_mlfq
+    subject: OS
+    title: "OSTEP: Scheduling: The Multi-Level Feedback Queue"
+    url: "https://pages.cs.wisc.edu/~remzi/OSTEP/cpu-sched-mlfq.pdf"
+    type: pdf
+  - id: ostep_cpu_lottery
+    subject: OS
+    title: "OSTEP: Scheduling: Proportional Share"
+    url: "https://pages.cs.wisc.edu/~remzi/OSTEP/cpu-sched-lottery.pdf"
+    type: pdf
+  - id: ostep_cpu_multi
+    subject: OS
+    title: "OSTEP: Multiprocessor Scheduling"
+    url: "https://pages.cs.wisc.edu/~remzi/OSTEP/cpu-sched-multi.pdf"
+    type: pdf
+
+  # OSTEP - Memory Virtualization
+  - id: ostep_vm_intro
+    subject: OS
+    title: "OSTEP: Address Spaces"
+    url: "https://pages.cs.wisc.edu/~remzi/OSTEP/vm-intro.pdf"
+    type: pdf
+  - id: ostep_vm_api
+    subject: OS
+    title: "OSTEP: Interlude: Memory API"
+    url: "https://pages.cs.wisc.edu/~remzi/OSTEP/vm-api.pdf"
+    type: pdf
+  - id: ostep_vm_mechanism
+    subject: OS
+    title: "OSTEP: Address Translation"
+    url: "https://pages.cs.wisc.edu/~remzi/OSTEP/vm-mechanism.pdf"
+    type: pdf
+  - id: ostep_vm_segmentation
+    subject: OS
+    title: "OSTEP: Segmentation"
+    url: "https://pages.cs.wisc.edu/~remzi/OSTEP/vm-segmentation.pdf"
+    type: pdf
+  - id: ostep_vm_freespace
+    subject: OS
+    title: "OSTEP: Free-Space Management"
+    url: "https://pages.cs.wisc.edu/~remzi/OSTEP/vm-freespace.pdf"
+    type: pdf
+  - id: ostep_vm_paging
+    subject: OS
+    title: "OSTEP: Paging: Introduction"
+    url: "https://pages.cs.wisc.edu/~remzi/OSTEP/vm-paging.pdf"
+    type: pdf
+  - id: ostep_vm_tlbs
+    subject: OS
+    title: "OSTEP: Paging: Faster Translations (TLBs)"
+    url: "https://pages.cs.wisc.edu/~remzi/OSTEP/vm-tlbs.pdf"
+    type: pdf
+  - id: ostep_vm_smalltables
+    subject: OS
+    title: "OSTEP: Paging: Smaller Tables"
+    url: "https://pages.cs.wisc.edu/~remzi/OSTEP/vm-smalltables.pdf"
+    type: pdf
+  - id: ostep_vm_beyondphys
+    subject: OS
+    title: "OSTEP: Beyond Physical Memory: Mechanisms"
+    url: "https://pages.cs.wisc.edu/~remzi/OSTEP/vm-beyondphys.pdf"
+    type: pdf
+  - id: ostep_vm_beyondphys_policy
+    subject: OS
+    title: "OSTEP: Beyond Physical Memory: Policies"
+    url: "https://pages.cs.wisc.edu/~remzi/OSTEP/vm-beyondphys-policy.pdf"
+    type: pdf
+  - id: ostep_vm_complete
+    subject: OS
+    title: "OSTEP: Complete VM Systems"
+    url: "https://pages.cs.wisc.edu/~remzi/OSTEP/vm-complete.pdf"
+    type: pdf
+
+  # OSTEP - Concurrency
+  - id: ostep_threads_intro
+    subject: OS
+    title: "OSTEP: Concurrency: An Introduction"
+    url: "https://pages.cs.wisc.edu/~remzi/OSTEP/threads-intro.pdf"
+    type: pdf
+  - id: ostep_threads_api
+    subject: OS
+    title: "OSTEP: Thread API"
+    url: "https://pages.cs.wisc.edu/~remzi/OSTEP/threads-api.pdf"
+    type: pdf
+  - id: ostep_threads_locks
+    subject: OS
+    title: "OSTEP: Locks"
+    url: "https://pages.cs.wisc.edu/~remzi/OSTEP/threads-locks.pdf"
+    type: pdf
+  - id: ostep_threads_locks_usage
+    subject: OS
+    title: "OSTEP: Locked Data Structures"
+    url: "https://pages.cs.wisc.edu/~remzi/OSTEP/threads-locks-usage.pdf"
+    type: pdf
+  - id: ostep_threads_cv
+    subject: OS
+    title: "OSTEP: Condition Variables"
+    url: "https://pages.cs.wisc.edu/~remzi/OSTEP/threads-cv.pdf"
+    type: pdf
+  - id: ostep_threads_sema
+    subject: OS
+    title: "OSTEP: Semaphores"
+    url: "https://pages.cs.wisc.edu/~remzi/OSTEP/threads-sema.pdf"
+    type: pdf
+  - id: ostep_threads_bugs
+    subject: OS
+    title: "OSTEP: Concurrency Bugs"
+    url: "https://pages.cs.wisc.edu/~remzi/OSTEP/threads-bugs.pdf"
+    type: pdf
+  - id: ostep_threads_events
+    subject: OS
+    title: "OSTEP: Event-based Concurrency"
+    url: "https://pages.cs.wisc.edu/~remzi/OSTEP/threads-events.pdf"
+    type: pdf
+
+  # OSTEP - Persistence
+  - id: ostep_file_devices
+    subject: OS
+    title: "OSTEP: I/O Devices"
+    url: "https://pages.cs.wisc.edu/~remzi/OSTEP/file-devices.pdf"
+    type: pdf
+  - id: ostep_file_disks
+    subject: OS
+    title: "OSTEP: Hard Disk Drives"
+    url: "https://pages.cs.wisc.edu/~remzi/OSTEP/file-disks.pdf"
+    type: pdf
+  - id: ostep_file_raid
+    subject: OS
+    title: "OSTEP: RAID"
+    url: "https://pages.cs.wisc.edu/~remzi/OSTEP/file-raid.pdf"
+    type: pdf
+  - id: ostep_file_intro
+    subject: OS
+    title: "OSTEP: Files and Directories"
+    url: "https://pages.cs.wisc.edu/~remzi/OSTEP/file-intro.pdf"
+    type: pdf
+  - id: ostep_file_implementation
+    subject: OS
+    title: "OSTEP: File System Implementation"
+    url: "https://pages.cs.wisc.edu/~remzi/OSTEP/file-implementation.pdf"
+    type: pdf
+  - id: ostep_file_ffs
+    subject: OS
+    title: "OSTEP: Locality and The Fast File System"
+    url: "https://pages.cs.wisc.edu/~remzi/OSTEP/file-ffs.pdf"
+    type: pdf
+  - id: ostep_file_journaling
+    subject: OS
+    title: "OSTEP: Crash Consistency: FSCK and Journaling"
+    url: "https://pages.cs.wisc.edu/~remzi/OSTEP/file-journaling.pdf"
+    type: pdf
+  - id: ostep_file_lfs
+    subject: OS
+    title: "OSTEP: Log-structured File Systems"
+    url: "https://pages.cs.wisc.edu/~remzi/OSTEP/file-lfs.pdf"
+    type: pdf
+  - id: ostep_file_ssd
+    subject: OS
+    title: "OSTEP: Flash-based SSDs"
+    url: "https://pages.cs.wisc.edu/~remzi/OSTEP/file-ssd.pdf"
+    type: pdf
+  - id: ostep_file_integrity
+    subject: OS
+    title: "OSTEP: Data Integrity and Protection"
+    url: "https://pages.cs.wisc.edu/~remzi/OSTEP/file-integrity.pdf"
+    type: pdf
+
+  # OSTEP - Distributed
+  - id: ostep_dist_intro
+    subject: OS
+    title: "OSTEP: Distributed Systems"
+    url: "https://pages.cs.wisc.edu/~remzi/OSTEP/dist-intro.pdf"
+    type: pdf
+  - id: ostep_dist_nfs
+    subject: OS
+    title: "OSTEP: Network File System (NFS)"
+    url: "https://pages.cs.wisc.edu/~remzi/OSTEP/dist-nfs.pdf"
+    type: pdf
+  - id: ostep_dist_afs
+    subject: OS
+    title: "OSTEP: Andrew File System (AFS)"
+    url: "https://pages.cs.wisc.edu/~remzi/OSTEP/dist-afs.pdf"
+    type: pdf
+
+  # MIT xv6
+  - id: xv6_book
+    subject: OS
+    title: "xv6: a simple, Unix-like teaching operating system"
+    url: "https://pdos.csail.mit.edu/6.1810/2025/xv6/book-riscv-rev5.pdf"
+    type: pdf
+
+  # Erickson - Algorithms
+  - id: erickson_recursion
+    subject: DSA
+    title: "Algorithms: Recursion"
+    url: "https://jeffe.cs.illinois.edu/teaching/algorithms/book/01-recursion.pdf"
+    type: pdf
+  - id: erickson_backtracking
+    subject: DSA
+    title: "Algorithms: Backtracking"
+    url: "https://jeffe.cs.illinois.edu/teaching/algorithms/book/02-backtracking.pdf"
+    type: pdf
+  - id: erickson_dynprog
+    subject: DSA
+    title: "Algorithms: Dynamic Programming"
+    url: "https://jeffe.cs.illinois.edu/teaching/algorithms/book/03-dynprog.pdf"
+    type: pdf
+  - id: erickson_greedy
+    subject: DSA
+    title: "Algorithms: Greedy Algorithms"
+    url: "https://jeffe.cs.illinois.edu/teaching/algorithms/book/04-greedy.pdf"
+    type: pdf
+  - id: erickson_graphs
+    subject: DSA
+    title: "Algorithms: Basic Graph Algorithms"
+    url: "https://jeffe.cs.illinois.edu/teaching/algorithms/book/05-graphs.pdf"
+    type: pdf
+  - id: erickson_dfs
+    subject: DSA
+    title: "Algorithms: Depth-First Search"
+    url: "https://jeffe.cs.illinois.edu/teaching/algorithms/book/06-dfs.pdf"
+    type: pdf
+  - id: erickson_mst
+    subject: DSA
+    title: "Algorithms: Minimum Spanning Trees"
+    url: "https://jeffe.cs.illinois.edu/teaching/algorithms/book/07-mst.pdf"
+    type: pdf
+  - id: erickson_sssp
+    subject: DSA
+    title: "Algorithms: Shortest Paths"
+    url: "https://jeffe.cs.illinois.edu/teaching/algorithms/book/08-sssp.pdf"
+    type: pdf
+  - id: erickson_apsp
+    subject: DSA
+    title: "Algorithms: All-Pairs Shortest Paths"
+    url: "https://jeffe.cs.illinois.edu/teaching/algorithms/book/09-apsp.pdf"
+    type: pdf
+  - id: erickson_maxflow
+    subject: DSA
+    title: "Algorithms: Maximum Flows & Minimum Cuts"
+    url: "https://jeffe.cs.illinois.edu/teaching/algorithms/book/10-maxflow.pdf"
+    type: pdf
+  - id: erickson_nphard
+    subject: DSA
+    title: "Algorithms: NP-Hardness"
+    url: "https://jeffe.cs.illinois.edu/teaching/algorithms/book/12-nphard.pdf"
+    type: pdf
+
+  # Open Data Structures
+  - id: ods_python
+    subject: DSA
+    title: "Open Data Structures (in Python)"
+    url: "https://opendatastructures.org/ods-python.pdf"
+    type: pdf

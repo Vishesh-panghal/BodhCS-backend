@@ -1,0 +1,17 @@
+{
+  "sorting": "flowchart TD",
+  "tree": "flowchart TD",
+  "graph_traversal": "flowchart TD",
+  "linked_list": "flowchart LR",
+  "stack": "flowchart TD",
+  "queue": "flowchart LR",
+  "dynamic_programming": "flowchart TD",
+  "recursion": "flowchart TD",
+  "binary_search": "flowchart TD",
+  "hashing": "flowchart LR",
+  "dijkstra": "flowchart TD",
+  "bfs": "flowchart TD",
+  "dfs": "flowchart TD",
+  "mst": "flowchart TD",
+  "complexity": "flowchart LR"
+}

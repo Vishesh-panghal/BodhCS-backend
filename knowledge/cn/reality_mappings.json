@@ -1,0 +1,10 @@
+{
+  "TCP 3-Way Handshake": "Every HTTPS request you make (Chrome, curl) starts with SYN → SYN-ACK → ACK. Wireshark filter: tcp.flags.syn==1. Takes ~1 RTT to establish.",
+  "DNS": "When you type google.com, your OS queries a recursive resolver (8.8.8.8 for Google DNS, 1.1.1.1 for Cloudflare). The resolver walks the hierarchy: root → .com TLD → google.com authoritative NS.",
+  "HTTP": "curl -v google.com shows the raw HTTP/1.1 request/response. HTTP/2 uses multiplexing (multiple streams on one TCP connection). HTTP/3 uses QUIC (UDP-based) for 0-RTT connections.",
+  "NAT": "Your home router uses NAT to map multiple private IPs (192.168.x.x) to one public IP. Port-based NAT (PAT/NAPT) is the most common. Docker uses NAT for container networking.",
+  "Subnetting": "AWS VPCs use CIDR blocks (e.g., 10.0.0.0/16 = 65,536 IPs). A /24 subnet gives 256 addresses (254 usable). Kubernetes pod networking uses overlay networks with /16 or /12 CIDR blocks.",
+  "Routing": "BGP is the glue of the internet — ISPs exchange routes via BGP peering. OSPF is used within enterprise networks. Kubernetes uses kube-proxy for service routing (iptables or IPVS mode).",
+  "TLS": "HTTPS uses TLS 1.3 (1-RTT handshake, forward secrecy by default). Let's Encrypt issues free certificates. Certificate chain: site cert → intermediate CA → root CA.",
+  "WebSocket": "Real-time apps (Slack, Discord, trading platforms) use WebSockets for persistent bidirectional communication. Starts as HTTP upgrade request. Alternative: Server-Sent Events (SSE) for one-way streaming."
+}

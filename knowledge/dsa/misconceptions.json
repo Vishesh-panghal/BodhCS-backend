@@ -1,0 +1,26 @@
+[
+  {
+    "myth": "O(n log n) is always faster than O(n²)",
+    "truth": "Big-O describes asymptotic behavior. For small n, O(n²) algorithms like insertion sort can be faster due to lower constant factors and cache friendliness. That's why Timsort switches to insertion sort for small runs (<64 elements)."
+  },
+  {
+    "myth": "Hash tables are always O(1)",
+    "truth": "Average case is O(1) but worst case is O(n) with hash collisions. Choosing a good hash function, load factor management, and collision resolution strategy are critical. Java 8+ converts HashMap chains to trees at 8 entries."
+  },
+  {
+    "myth": "Recursion is always slower than iteration",
+    "truth": "Tail-recursive functions can be optimized to iteration by the compiler (tail call optimization). The overhead of recursion is the function call stack. Some problems (tree traversal, divide-and-conquer) are naturally recursive and cleaner to express that way."
+  },
+  {
+    "myth": "BFS always uses more memory than DFS",
+    "truth": "BFS uses O(branching_factor^depth) memory. DFS uses O(depth) stack memory. But for wide, shallow graphs BFS may use less memory than DFS on deep graphs. The real comparison depends on graph structure."
+  },
+  {
+    "myth": "Greedy algorithms always give optimal solutions",
+    "truth": "Greedy works only when the problem has the greedy-choice property AND optimal substructure. Fractional knapsack: greedy works. 0/1 knapsack: greedy fails, need DP. Always prove greedy correctness via exchange argument."
+  },
+  {
+    "myth": "Linked lists are better than arrays for insertion",
+    "truth": "Linked list insertion at a known position is O(1), but finding that position is O(n). Arrays have better cache locality (spatial locality principle). In practice, arrays/vectors outperform linked lists for most workloads due to CPU cache effects."
+  }
+]

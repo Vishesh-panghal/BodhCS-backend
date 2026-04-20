@@ -1,0 +1,8 @@
+{
+  "SQL Injection": "OWASP #3 (2021). Parameterized queries (prepared statements) are the primary defense. ORMs like SQLAlchemy/Django ORM auto-parameterize. Example: `SELECT * FROM users WHERE id = ?` instead of string concatenation.",
+  "XSS": "OWASP #7 (2021). Three types: Stored, Reflected, DOM-based. Defense: Content Security Policy (CSP) headers, output encoding (HTML entities), DOMPurify for client-side sanitization. React auto-escapes by default.",
+  "TLS": "TLS 1.3 reduced handshake to 1-RTT (from 2-RTT in TLS 1.2). Uses only AEAD ciphers (AES-GCM, ChaCha20-Poly1305). Forward secrecy via ephemeral Diffie-Hellman (ECDHE). Let's Encrypt provides free certificates.",
+  "JWT": "JSON Web Tokens used in Firebase Auth, Auth0, Supabase. Three parts: header.payload.signature. Stateless but can't be revoked without a blocklist. Store in httpOnly cookies, not localStorage (XSS risk).",
+  "Hashing": "Passwords: bcrypt (cost factor 12+), argon2id (memory-hard). NEVER use MD5/SHA-1 for passwords. File integrity: SHA-256. Git uses SHA-1 (migrating to SHA-256). Rainbow table defense: salting.",
+  "OAuth 2.0": "Google Sign-In, GitHub Login use OAuth 2.0 Authorization Code flow with PKCE. Access tokens are short-lived (1h), refresh tokens are long-lived. OpenID Connect (OIDC) adds identity layer on top of OAuth."
+}

@@ -1,0 +1,4 @@
+cs-buddy-backend/
+.env
+firebase-service-account.json
+__pycache__/

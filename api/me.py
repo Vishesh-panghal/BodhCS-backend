@@ -12,11 +12,16 @@ router = APIRouter(prefix="/api/v1/me", tags=["me"])
 
 class ProfileUpdateRequest(BaseModel):
     name: Optional[str] = None
+    degree: Optional[str] = None
+    institution_name: Optional[str] = None
+    age_group: Optional[str] = None
+    learning_goal: Optional[str] = None
     daily_planned_minutes: Optional[int] = Field(default=None, ge=5, le=240)
     target_exam: Optional[str] = None
     current_level: Optional[str] = None
     focus_topic: Optional[str] = None
     onboarding_completed: Optional[bool] = None
+    personal_details_completed: Optional[bool] = None
 
 
 def _now_iso() -> str:
@@ -28,6 +33,10 @@ def _default_profile(uid: str, token_payload: dict) -> dict:
     return {
         "uid": uid,
         "name": token_payload.get("name") or "Learner",
+        "degree": None,
+        "institution_name": None,
+        "age_group": None,
+        "learning_goal": None,
         "phone_number": token_payload.get("phone_number"),
         "photo_url": token_payload.get("picture"),
         "daily_planned_minutes": 24,
@@ -35,6 +44,7 @@ def _default_profile(uid: str, token_payload: dict) -> dict:
         "current_level": "Intermediate",
         "focus_topic": "Operating Systems",
         "onboarding_completed": False,
+        "personal_details_completed": False,
         "created_at": now,
         "updated_at": now,
     }

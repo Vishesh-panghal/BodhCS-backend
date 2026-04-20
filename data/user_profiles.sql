@@ -4,6 +4,10 @@
 create table if not exists public.user_profiles (
   uid text primary key,
   name text,
+  degree text,
+  institution_name text,
+  age_group text,
+  learning_goal text,
   phone_number text,
   photo_url text,
   daily_planned_minutes int not null default 24,
@@ -11,9 +15,16 @@ create table if not exists public.user_profiles (
   current_level text not null default 'Intermediate',
   focus_topic text not null default 'Operating Systems',
   onboarding_completed boolean not null default false,
+  personal_details_completed boolean not null default false,
   created_at timestamptz not null default now(),
   updated_at timestamptz not null default now()
 );
+
+alter table public.user_profiles add column if not exists degree text;
+alter table public.user_profiles add column if not exists institution_name text;
+alter table public.user_profiles add column if not exists age_group text;
+alter table public.user_profiles add column if not exists learning_goal text;
+alter table public.user_profiles add column if not exists personal_details_completed boolean not null default false;
 
 create or replace function public.set_updated_at_user_profiles()
 returns trigger as $$

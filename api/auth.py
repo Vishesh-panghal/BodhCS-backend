@@ -1,4 +1,5 @@
 import os
+import json
 import firebase_admin
 from firebase_admin import auth, credentials
 from fastapi import Depends, HTTPException, status
@@ -7,7 +8,11 @@ from core.config import settings
 
 # Initialize Firebase Admin
 if not firebase_admin._apps:
-    cred = credentials.Certificate(settings.firebase_service_account_path_absolute)
+    firebase_service_account_json = os.getenv("FIREBASE_SERVICE_ACCOUNT_JSON")
+    if firebase_service_account_json:
+        cred = credentials.Certificate(json.loads(firebase_service_account_json))
+    else:
+        cred = credentials.Certificate(settings.firebase_service_account_path_absolute)
     firebase_admin.initialize_app(cred)
 
 security = HTTPBearer()

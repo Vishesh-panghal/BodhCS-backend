@@ -1,24 +1,27 @@
+--extra-index-url https://download.pytorch.org/whl/cpu
+
 # Web Server
-fastapi
-uvicorn[standard]
+fastapi==0.115.6
+uvicorn[standard]==0.32.1
 python-multipart
 
 # Configuration & Logic
-pydantic
-pydantic-settings
+pydantic==2.10.3
+pydantic-settings==2.7.0
 python-dotenv
 
 # AI & Orchestration
-langgraph
-langchain-groq
-langchain-core
-langchain-community
-langchain-experimental
-langfuse
+langgraph==0.2.60
+langchain-groq==0.2.1
+langchain-core==0.3.25
+langchain-community==0.3.12
+langchain-experimental==0.3.3
+langfuse==2.56.3
 
 # RAG Engine
 faiss-cpu
-sentence-transformers
+torch==2.3.1+cpu
+sentence-transformers==3.3.1
 rank_bm25
 
 # Education & Analytics

@@ -16,7 +16,7 @@ langchain-groq==0.2.1
 langchain-core==0.3.25
 langchain-community==0.3.12
 langchain-experimental==0.3.3
-langfuse==2.56.3
+langfuse==2.56.2
 
 # RAG Engine
 faiss-cpu
